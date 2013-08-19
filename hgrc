@@ -1,0 +1,5 @@
+# Copy this file to .hg if you are using Mercurial.
+
+[alias]
+
+push = !echo "Use .bin\Push.ps1 or .bin\push.sh instead."
