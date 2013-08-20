@@ -1,3 +1,9 @@
+# Helpers to read files in this format:
+#
+#	global-win editor path/to/some/bin
+#	project-foo deploy-url http://some/url/here
+#	...
+
 function GetConfig {
 	$path = "~/.sublime-package-dev"
 
