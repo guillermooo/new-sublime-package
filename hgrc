@@ -1,5 +1,9 @@
 # Copy this file to .hg if you are using Mercurial.
 
-[alias]
+[paths]
+bb = ssh://hg@bitbucket.org/guillermooo/unnamed
+git = git+ssh://git@github.com/guillermooo/Unnamed.git
 
-push = !echo "Use .bin\Push.ps1 or .bin\push.sh instead."
+[alias]
+push = !echo Use .bin\Push.ps1 or .bin\push.sh instead.
+
