@@ -35,8 +35,8 @@ function RenameFiles {
 function RemoveFiles {
 	set-location $script:projectRoot 
 	remove-item '.hg' -recurse -force
-	remove-item 'Init.ps1' -recurse -force
-	remove-item 'init.sh' -recurse -force
+	remove-item 'Init.ps1'
+	remove-item 'init.sh'
 }
 
 
