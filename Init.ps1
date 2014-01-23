@@ -5,6 +5,7 @@ $script:projectRoot = split-path $MyInvocation.MyCommand.Path -parent
 
 
 function ExpandKeywords {
+	"Expanding keywords..."
 	$content = get-content -path (join-path $script:projectRoot 'Unnamed.sublime-project') 
 	$content = $content -replace "Unnamed",$ProjectName
 	$content = $content -replace "unnamed",$ProjectName.ToLower()
@@ -28,11 +29,13 @@ function ExpandKeywords {
 
 
 function RenameFiles {
+	"Renaming files..."
 	rename-item "Unnamed.sublime-project" "$ProjectName.sublime-project"
 }
 
 
 function RemoveFiles {
+	"Removing files..."
 	set-location $script:projectRoot 
 	remove-item '.hg' -recurse -force -erroraction silentlyContinue
 	remove-item 'Init.ps1'
@@ -43,3 +46,4 @@ function RemoveFiles {
 ExpandKeywords
 RenameFiles
 RemoveFiles
+"finished!"
